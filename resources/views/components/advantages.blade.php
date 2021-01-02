@@ -13,10 +13,10 @@ min-width: auto;
         <div class="container-fluid pb-4 pt-2">
         <div class="d-none d-md-flex arrow-directions row no-gutters">
                 <div class="horizon-prev mr-1">
-                        <button class="btn btn-md shadow-sm"><i class="fas fa-arrow-left"></i></button>
+                        <button style="background: #EFC100;" class="btn btn-md shadow-sm"><i class="fas fa-arrow-left"></i></button>
                     </div>
                 <div class="horizon-next ml-1">
-                         <button class="btn btn-md shadow-sm"><i class="fas fa-arrow-right"></i></button>
+                         <button style="background: #EFC100;" class="btn btn-md shadow-sm"><i class="fas fa-arrow-right"></i></button>
                 </div>
             </div>
             <div class="row text-white">

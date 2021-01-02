@@ -1,9 +1,10 @@
-<section class="key-to-success">
+<section style="background: url({{ asset('images/webpage/2.jpg') }}) center / cover; background-attachment: fixed;">
     <div class="container py-4">
-        <span class="key-to-success-title">Coachteen <span class="kts-is-key">is the</span><br><strong>key to success<strong></span>
+        <h1 class="text-white"><b>Coachteen</b> is the</h1>
+        <h1 class="text-white"><b>key to success</b></h1>
         <div class="row pb-5">
             <div class="col-sm-6 py-3">
-                <div class="video-coachteen">
+                <div style="    background: linear-gradient(to right,rgb(255 113 180/0.6),rgb(285 112 180/0.4)),url({{ asset('images/webpage/PAGINA88.png') }}) center/80% no-repeat; height: 100%; width: 100%;">
                 <iframe 
                 width="100%" 
                 height="100%" 
@@ -17,7 +18,13 @@
                 </div>
             </div>
             <div class="col-sm-6 py-3">
-                <div class="key-to-success-content">
+                <div style="background: rgb(253 65 154/.5);
+    padding: 24px;
+    color: #fff;
+    backdrop-filter: blur(5px);
+    font-size: 24px;
+    font-weight: 100;
+    text-align: justify;">
                     <p>
                     Setting life goals and finding the path to
                     achieve them can be scary, but we’ll help you
