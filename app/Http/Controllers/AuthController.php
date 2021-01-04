@@ -12,12 +12,12 @@ class AuthController extends Controller
 {
     public function index()
     {
-        return view('login');
+        return view('templates/user/login');
     }  
  
     public function register()
     {
-        return view('register');
+        return view('templates/user/register');
     }
      
     public function postLogin(Request $request)
@@ -39,8 +39,10 @@ class AuthController extends Controller
     {  
         request()->validate([
         'name' => 'required',
+        'surname' => 'required',
         'email' => 'required|email|unique:users',
         'password' => 'required|min:6',
+        'g-recaptcha-response' => 'recaptcha',
         ]);
          
         $data = $request->all();
@@ -54,7 +56,7 @@ class AuthController extends Controller
     {
  
       if(Auth::check()){
-        return view('dashboard');
+        return view('templates/user/dashboard');
       }
        return Redirect::to("login")->withSuccess('Opps! You do not have access');
     }
@@ -63,6 +65,7 @@ class AuthController extends Controller
     {
       return User::create([
         'name' => $data['name'],
+        'surname' => $data['surname'],
         'email' => $data['email'],
         'password' => Hash::make($data['password'])
       ]);
@@ -71,7 +74,7 @@ class AuthController extends Controller
     public function logout() {
         Session::flush();
         Auth::logout();
-        return Redirect('login');
+        return Redirect('welcome');
     }
 }
 ?>

@@ -27,8 +27,9 @@
         <script src="{{ asset('js/jquery-3.5.1.min.js') }}"></script>
 
     <body>
-
-        <x-about-us.header-ab/>
+        <div class="py-3 px-5" style="background-color: #0597D5">
+            <x-general.header/>
+        </div>
         <x-about-us.mission/>
         <x-about-us.separator/>
         <x-about-us.purpose/>

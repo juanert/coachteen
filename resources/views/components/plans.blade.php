@@ -80,7 +80,11 @@ height: auto;
                             <span class="d-block title-prices-before">Before</span>
                             <span class="d-block prices-before mb-2">80$</span>
                         </div>
+                        @if(!Auth::check())
+                        <a class="btn-plans-basic font-xs py-3" href="{{ route('sign-up') }}">$50/M USD</a>
+                        @else
                         <a class="btn-plans-basic font-xs py-3" href="https://coachteen.com/get-started/step-1/">$50/M USD</a>
+                        @endif
                         </div>
                     </div>
                 </div>
@@ -99,7 +103,11 @@ height: auto;
                             <span class="d-block title-prices-before">Before</span>
                             <span class="d-block prices-before mb-2">150$</span>
                         </div>
+                        @if(!Auth::check())
+                        <a class="btn-plans-basic font-xs py-3" href="{{ route('sign-up') }}">$100/M USD</a>
+                        @else
                         <a class="btn-plans-basic font-xs py-3" href="https://coachteen.com/get-started/step-1/">$100/M USD</a>
+                        @endif
                         </div>
                     </div>
                 </div>
@@ -113,7 +121,11 @@ height: auto;
                         <span class="d-block title-prices-before">Before</span>
                         <span class="d-block prices-before">80$</span>
                     </div>
+                    @if(!Auth::check())
+                    <a class="btn-plans-basic font-xs py-3" href="{{ route('sign-up') }}">$50/M USD</a>
+                    @else
                     <a class="btn-plans-basic font-xs py-3" href="https://coachteen.com/get-started/step-1/">$50/M USD</a>
+                    @endif
                     <p class="my-0 mt-3 text-white" style="font-size:14px;">Monthly</p>
                     </div>
                 </div>
@@ -123,16 +135,21 @@ height: auto;
                         <span class="d-block title-prices-before">Before</span>
                         <span class="d-block prices-before">150$</span>
                     </div>
+                    @if(!Auth::check())
+                    <a style="word-break: keep-all;" class="btn-plans-academic font-xs py-3" href="{{ route('sign-up') }}">110$/M USD</a>
+                    @else
                     <a style="word-break: keep-all;" class="btn-plans-academic font-xs py-3" href="https://coachteen.com/get-started/step-1/">110$/M USD</a>
+                    @endif
                     <p class="my-0 mt-3 text-white" style="font-size:14px;">Monthly</p>
                     </div>
                 </div>
             </div>
 
-
+            @if(!Auth::check())
             <div class="row justify-content-center py-5 pb-5">
-                <a class="btn btn-lg btn-outline-light w-75" href="/sign-up"><strong><i class="fas fa-sign-in-alt mr-2"></i>Sign Up Now!</strong></a>
+                <a class="btn btn-lg btn-outline-light w-75" href="{{ route('sign-up') }}"><strong><i class="fas fa-sign-in-alt mr-2"></i>Sign Up Now!</strong></a>
             </div>
+            @endif
             </div>
         </div>
     </div>
